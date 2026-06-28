@@ -4,4 +4,4 @@ My website! Feel free to check it out for more info about myself, or skid some c
 Made this cause im tired of bios. 
 
 
-![Spinning boykisser]([https://example.com/screenshot.png](https://media.tenor.com/AYF6XhiYhKgAAAAj/boy-kisser.gif))
+![GIF](https://example.com/path/to/demo.gif](https://media.tenor.com/AYF6XhiYhKgAAAAj/boy-kisser.gif))
