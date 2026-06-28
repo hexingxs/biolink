@@ -1,4 +1,4 @@
-# biolink.github.io
+# ~ My biolink ~
 My website! Feel free to check it out for more info about myself, or skid some code ;)
 
 Made this cause im tired of bios. 
