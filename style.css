@@ -1,0 +1,272 @@
+/* Feel free to use this code for your own website! */
+
+/* Reset everything so layout behaves predictably */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth scrolling between anchors */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Cursor glow effect (from JS) */
+.cursor-glow {
+  position: fixed;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.164), transparent 70%);
+  filter: blur(28px);
+  mix-blend-mode: screen;
+  z-index: 999;
+}
+
+/* Background soft purple glow */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.11), transparent 45%),
+    radial-gradient(circle at 80% 25%, rgba(170, 170, 170, 0.212), transparent 55%),
+    radial-gradient(circle at 50% 90%, rgba(255, 255, 255, 0.137), transparent 60%);
+
+  filter: blur(110px);
+  animation: floatBg 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatBg {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* Main page container */
+.container {
+  max-width: 920px;
+  margin: 70px auto;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+/* Glass card base */
+.glass {
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255,255,255,.06);
+  backdrop-filter: blur(15px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: 0.35s ease;
+}
+
+.glass:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,.12);
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 16px;
+  z-index: 100;
+
+  display: flex;
+  gap: 10px;
+  padding: 10px 14px;
+
+  width: fit-content;
+  margin: 14px auto;
+
+  border-radius: 999px;
+  background: rgba(18,18,18,.72);
+  border: 1px solid rgba(255,255,255,.06);
+  backdrop-filter: blur(18px);
+}
+
+#typewriter::after {
+    content: "|";
+    margin-left: 2px;
+    animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.navbar a {
+  padding: 7px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: 0.25s ease;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.116);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 24px 60px;
+}
+
+/* profile image */
+.avatar {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 35px rgba(255,255,255,.08);
+  margin-bottom: 18px;
+  transition: 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* headings */
+h1 {
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
+  letter-spacing: -0.8px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: rgba(255,255,255,.72);
+}
+
+.description {
+  color: rgba(255,255,255,.55);
+  max-width: 620px;
+  margin: 14px auto 0;
+  opacity: 0.6;
+  
+}
+
+/* button */
+.hero-buttons {
+  margin-top: 26px;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text);
+
+  background: linear-gradient(
+      135deg,
+      rgba(255,255,255,.08),
+      rgba(255,255,255,.03)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 0.25s ease;
+}
+
+.hero-buttons a:hover {
+  transform: translateY(-4px);
+}
+
+/* sections */
+.about,
+.stack,
+.links {
+  padding: 38px;
+}
+
+/* section label */
+.section-title {
+  font-size: 0.75rem;
+  letter-spacing: 1.4px;
+  color: var(--primary-2);
+  margin-bottom: 14px;
+  display: block;
+}
+
+/* tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags a {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.2s ease;
+}
+
+.tags a:hover {
+  transform: scale(1.1);
+}
+
+/* links */
+.links a {
+  display: block;
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text);
+
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: 0.25s ease;
+}
+
+.links a:hover {
+  transform: translateX(10px);
+  color: var(--muted);
+}
+
+/* matrix canvas */
+#cmatrix {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+/* reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

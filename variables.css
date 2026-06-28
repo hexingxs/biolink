@@ -1,0 +1,15 @@
+:root {
+    --bg: #090909;
+    --glass: rgba(20,20,20,.65);
+
+    --text: #f4f4f4;
+    --muted: #b5b5b5;
+
+    --primary: #ffffff;
+    --primary-2: #cfcfcf;
+
+    --radius-lg: 26px;
+    --section-gap: 50px;
+
+    --shadow: 0 12px 40px rgba(0,0,0,.45);
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../Media/favicon.ico">
+
+  <title>Hex's Biolink</title>
+
+  <!-- Inter font from Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="variables.css" />
+</head>
+
+<body>
+
+  <canvas id="cmatrix"></canvas>
+  <div class="bg"></div>
+
+  <!-- Top navigation -->
+  <nav class="navbar glass">
+    <a href="#about">About</a>
+    <a href="#lang">Languages</a>
+    <a href="#links">Links</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="hero glass">
+
+      <img src="../Media/pfp.jpg" alt="Profile picture" class="avatar" />
+
+      <h1>Hello, my name is <span id="typewriter"></span></h1>
+
+      <p class="subtitle">
+        IT Intermediate, Programmer, and Tech Enthusiast.
+      </p>
+
+      <p class="description">
+        Currently re-learning C++ and Python while exploring software and systems.
+        I come from the Czech Republic.
+      </p>
+
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about glass reveal">
+      <span class="section-title">About</span>
+
+      <h2>Tech has always been one of my biggest interests.</h2>
+
+      <p>
+        I've been interested in IT and programming since I was a kid.
+        Understanding how software works behind the scenes is what pulled me into tech.
+      </p>
+    </section>
+
+    <!-- Languages -->
+    <section id="lang" class="stack glass reveal">
+      <span class="section-title">Languages</span>
+
+      <div class="tags">
+        <a href="https://cplusplus.com/" target="_blank" rel="noopener noreferrer">C++</a>
+        <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a>
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer">HTML</a>
+        <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer">CSS</a>
+      </div>
+    </section>
+
+    <!-- Links -->
+    <section id="links" class="links glass reveal">
+      <span class="section-title">Links</span>
+
+      <a href="https://github.com/hexingxs" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+
+      <a href="https://discord.com/users/1517167537685663786" target="_blank" rel="noopener noreferrer">
+        Discord
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="../Javascript/cmatrix.js" defer></script>
+  <script src="../Javascript/glowmouse.js" defer></script>
+  <script src="../Javascript/typewriter.js" defer></script>
+
+  <!-- Background music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="../Media/song1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    document.addEventListener("click", () => {
+      document.getElementById("bgMusic").play();
+    }, { once: true });
+  </script>
+
+</body>
+</html>
