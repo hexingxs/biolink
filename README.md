@@ -3,5 +3,9 @@ My website! Feel free to check it out for more info about myself, or skid some c
 
 Made this cause im tired of bios. 
 
+## Features
 
-![GIF](https://example.com/path/to/demo.gif](https://media.tenor.com/AYF6XhiYhKgAAAAj/boy-kisser.gif))
+- Links
+- Info about me
+- Open source
+- Cool animations
